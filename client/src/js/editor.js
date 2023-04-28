@@ -27,7 +27,6 @@ export default class {
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
       if(data.length > 0){
-        console.log("HERE");
         this.editor.setValue(data[data.length-1]["content"]);
       } else {
         this.editor.setValue(localData || header || "");
